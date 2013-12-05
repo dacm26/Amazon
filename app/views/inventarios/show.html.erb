@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @inventario.nombre %>
+</p>
+
+<p>
+  <strong>Precio compra:</strong>
+  <%= @inventario.precio_compra %>
+</p>
+
+<p>
+  <strong>Precio venta:</strong>
+  <%= @inventario.precio_venta %>
+</p>
+
+<p>
+  <strong>Shipping:</strong>
+  <%= @inventario.shipping %>
+</p>
+
+<p>
+  <strong>Id tipo:</strong>
+  <%= @inventario.id_tipo %>
+</p>
+
+<%= link_to 'Edit', edit_inventario_path(@inventario) %> |
+<%= link_to 'Back', inventarios_path %>

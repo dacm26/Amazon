@@ -1,0 +1,35 @@
+<h1>Listing inventarios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Precio compra</th>
+      <th>Precio venta</th>
+      <th>Shipping</th>
+      <th>Id tipo</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @inventarios.each do |inventario| %>
+      <tr>
+        <td><%= inventario.nombre %></td>
+        <td><%= inventario.precio_compra %></td>
+        <td><%= inventario.precio_venta %></td>
+        <td><%= inventario.shipping %></td>
+        <td><%= inventario.id_tipo %></td>
+        <td><%= link_to 'Show', inventario %></td>
+        <td><%= link_to 'Edit', edit_inventario_path(inventario) %></td>
+        <td><%= link_to 'Destroy', inventario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Inventario', new_inventario_path %>
